@@ -1,0 +1,5 @@
+TOKEN = ''
+OWNER_ID =
+QIWI_TOKEN = ''
+GROUP_ID =
+GROUP_ID2 =
