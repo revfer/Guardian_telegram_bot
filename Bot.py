@@ -77,7 +77,7 @@ async def help_mes(msg: types.Message):
     if time() - bg[0] > waiting_time:
         bg[0] = time()
         await msg.answer(
-            'Нажмите на конпку Доступ внизу или напишите слово Доступ боту, чтобы получить доступ в приватку.',
+            'Нажмите на конпку Доступ внизу или напишите слово Доступ боту, чтобы получить доступ.',
             reply_markup=start_markup)
 
 
@@ -87,7 +87,7 @@ async def buttons_updater(msg: types.Message):
         bg[0] = time()
         if msg.text.lower() == 'доступ':
             await msg.answer(
-                f'Для доступа в приватку переведите 50 рублей на киви:'
+                f'Для доступа в группу переведите 50 рублей на киви:'
                 f'\nqiwi_link'
                 f'\nНЕ ЗАБУДЬТЕ НАПИСАТЬ В КОММЕНТАРИИ КОД: {msg.from_user.id}!'
                 f'\nИначе вы не получите доступ.'
@@ -107,7 +107,7 @@ async def handler_new_member(msg: types.Message):
         await msg.delete()
         if not is_payed(us['id']):
             await bot.kick_chat_member(GROUP_ID, us['id'])
-            await bot.send_message(us['id'], 'Вы ещё не оплатили вход в приватку!')
+            await bot.send_message(us['id'], 'Вы ещё не оплатили вход!')
         # print(us)
 
 
